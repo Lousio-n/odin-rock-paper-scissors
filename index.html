@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const choices = ["rock", "paper", "scissor"];
+
+        function getComputerChoice() {
+            let userChoice = prompt("Choose: rock, paper or scissors");
+            console.log(userChoice);
+            let computerChoice = choices[Math.floor(Math.random()*choices.length)];
+            if (userChoice === computerChoice) {
+                console.log("It's a draw!")
+            } else if (userChoice === "rock" && computerChoice === "scissor") {
+                console.log("You win! Rock beats scissors!")
+            } else {
+                console.log("You loose. Paper beats rock.")
+            }
+        }
+    </script>
+</body>
+</html>
