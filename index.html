@@ -17,13 +17,12 @@
             let userInput = prompt("Choose: rock, paper or scissor");
             let userChoice = `${userInput.toLowerCase()}`;
             let computerChoice = choices[Math.floor(Math.random() * choices.length)];
-            if (userChoice === computerChoice) {
-                console.log("It's a draw!")
-            } else if (userChoice === "rock" && computerChoice === "scissor" || userChoice === "paper" && computerChoice === "rock" || userChoice === "scissor" && computerChoice === "paper") {
-                console.log("You win!")
-            } else {
-                console.log("You loose.")
-            }
+
+            return userChoice === computerChoice ? "It's a draw."
+                : userChoice === "rock" && computerChoice === "scissor" ? "You win!"
+                : userChoice === "paper" && computerChoice === "rock" ? "You win!"
+                : userChoice === "scissor" && computerChoice === "paper" ? "You win!"
+                : "You loose." 
         }
 
         function playGame() {
