@@ -1,58 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Rock, Paper, Scissor</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <script>
-
-        const choices = ["rock", "paper", "scissor"];
-
-        let playerScore = 0;
-        let computerScore = 0;
-
-        function playRound() {
-            let userInput = prompt("Choose: rock, paper or scissor");
-            let userChoice = `${userInput.toLowerCase()}`;
-            let computerChoice = choices[Math.floor(Math.random() * choices.length)];
-
-            if (userChoice === computerChoice) {
-                console.log("It's a draw.");
-            } else if (userChoice === choices[0] && computerChoice === choices[2]) {
-                console.log("You win!")
-                playerScore++;
-            } else if (userChoice === choices[1] && computerChoice === choices[0]) {
-                console.log("You win!")
-                playerScore++;
-            } else if (userChoice === choices[2] && computerChoice === choices[1]) {
-                console.log("You win!")
-                playerScore++
-            } else {
-                console.log("You loose.")
-                computerScore++;
-            }
-        }
-
-        function playGame() {
-            for (let i = 0; i < 5; i++) {
-                if (i < 5) {
-                    playRound();
-                };
-            if (i == 4 && playerScore > computerScore) {
-                console.log(`You won the game! Your score was ${playerScore}!`);
-            } else if (i == 4 && playerScore < computerScore) {
-                console.log(`You lost. The computer won by ${computerScore - playerScore}`);
-            } else if (i == 4 && playerScore === computerScore) {
-                console.log("The game was a draw.");
-            }         
-            };
-        }
-    </script>
-</body>
-
+  <body>
+    Hello!
+  </body>
 </html>
