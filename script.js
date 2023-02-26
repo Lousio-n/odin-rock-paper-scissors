@@ -1,26 +1,42 @@
-const choices = ["rock", "paper", "scissor"];
+const computerChoices = ["rock", "paper", "scissor"];
 
 let userScore = 0;
 let computerScore = 0;
+let roundsPlayed = 0;
+let userChoice;
 
-function playRound() {
-  let computerChoice = choices[Math.floor(Math.random() * choices.length)];
+const gameScoreUser = document.querySelector(".userScore");
+const gameScoreComputer = document.querySelector(".computerScore");
+const gameResult = document.querySelector(".gameResult");
 
-  let userChoice = prompt("Choose: rock, paper or scissor").toLowerCase();
-
+function playRound(userChoice) {
+  let computerChoice =
+    computerChoices[Math.floor(Math.random() * computerChoices.length)];
   if (userChoice === computerChoice) {
-    console.log("It's a draw.");
-  } else if (userChoice === choices[0] && computerChoice === choices[2]) {
-    console.log("You win!");
+    gameResult.textContent = "It's a draw";
+  } else if (
+    userChoice === computerChoices[0] &&
+    computerChoice === computerChoices[2]
+  ) {
+    gameResult.textContent = "You win!";
     userScore++;
-  } else if (userChoice === choices[1] && computerChoice === choices[0]) {
-    console.log("You win!");
+  } else if (
+    userChoice === computerChoices[1] &&
+    computerChoice === computerChoices[0]
+  ) {
+    gameResult.textContent = "You win!";
     userScore++;
-  } else if (userChoice === choices[2] && computerChoice === choices[1]) {
-    console.log("You win!");
+  } else if (
+    userChoice === computerChoices[2] &&
+    computerChoice === computerChoices[1]
+  ) {
+    gameResult.textContent = "You win!";
     userScore++;
   } else {
-    console.log("You loose.");
+    gameResult.textContent = "You loose";
     computerScore++;
   }
+  gameScoreUser.textContent = `Your score is: ${userScore}`;
+  gameScoreComputer.textContent = `The computers score is: ${computerScore}`;
+  roundsPlayed++;
 }
