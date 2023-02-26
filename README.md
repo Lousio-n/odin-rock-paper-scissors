@@ -3,7 +3,7 @@
     A simple game of rock, paper, scissor.
     
     You can go to the game by clicking the link below.
-    **[Game](https://lousio-n.github.io/odin-rock-paper-scissors/)**
+    [Game](https://lousio-n.github.io/odin-rock-paper-scissors/)
 
     Click a button to make a choice for a round.
 
