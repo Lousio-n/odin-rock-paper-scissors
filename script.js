@@ -1,4 +1,4 @@
-const computerChoices = ["rock", "paper", "scissor"];
+const choices = ["rock", "paper", "scissor"];
 
 let userScore = 0;
 let computerScore = 0;
@@ -8,27 +8,42 @@ let userChoice;
 const gameScoreUser = document.querySelector(".userScore");
 const gameScoreComputer = document.querySelector(".computerScore");
 const gameResult = document.querySelector(".gameResult");
+const rock = document.querySelector('.buttonRock');
+const paper = document.querySelector('.buttonPaper');
+const scissor = document.querySelector('.buttonScissor');
+
+rock.addEventListener('click', () => {
+  playRound(choices[0]);
+})
+
+paper.addEventListener('click', () => {
+  playRound(choices[1]);
+})
+
+scissor.addEventListener('click', () => {
+  playRound(choices[2]);
+})
 
 function playRound(userChoice) {
   let computerChoice =
-    computerChoices[Math.floor(Math.random() * computerChoices.length)];
+    choices[Math.floor(Math.random() * choices.length)];
   if (userChoice === computerChoice) {
     gameResult.textContent = "It's a draw";
   } else if (
-    userChoice === computerChoices[0] &&
-    computerChoice === computerChoices[2]
+    userChoice === choices[0] &&
+    computerChoice === choices[2]
   ) {
     gameResult.textContent = "You win!";
     userScore++;
   } else if (
-    userChoice === computerChoices[1] &&
-    computerChoice === computerChoices[0]
+    userChoice === choices[1] &&
+    computerChoice === choices[0]
   ) {
     gameResult.textContent = "You win!";
     userScore++;
   } else if (
-    userChoice === computerChoices[2] &&
-    computerChoice === computerChoices[1]
+    userChoice === choices[2] &&
+    computerChoice === choices[1]
   ) {
     gameResult.textContent = "You win!";
     userScore++;

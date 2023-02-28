@@ -1,31 +1,45 @@
 body {
   font-family: 'Roboto Mono';
-  background-color: gray;
+  background-color: #0d0d1a;
   margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #e2e2e2;
+}
+
+.infoText {
+  font-size: 20px;
 }
 
 .gameButtonContainer {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  gap: 16px;
+  gap: 34px;
+  height: 200px;
+  width: 600px;
 }
 
 button {
-  background-color: #3d68c4;
-  color: black;
+  border: transparent;
+  background-color: #003333;
   font-size: 24px;
-  width: 100px;
+  color: #e2e2e2;
+  width: 140px;
   border-radius: 12px;
+  padding: 8px;
 }
 
-.gameScore {
+button:hover {
+  border: 3px solid #e2e2e2;
+}
+
+.scoreContainer {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .userScore,

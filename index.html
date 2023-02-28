@@ -1,33 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer src="./script.js"></script>
-    <link rel="stylesheet" href="./style.css" />
-    <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
-    <title>Rock, Paper, Scissor</title>
-  </head>
 
-  <body>
-    <h1>A game of rock, paper, scissor!</h1>
-    <p>Pick one with the buttons below.</p>
-    <div class="gameButtonContainer">      
-      <button onclick="playRound('rock')">Rock</button>
-      <button onclick="playRound('paper')">Paper</button>
-      <button onclick="playRound('scissor')">Scissor</button>
-    </div>
-    <div class="gameResult">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script defer src="./script.js"></script>
+  <link rel="stylesheet" href="./style.css" />
+  <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
+  <title>Rock, Paper, Scissor</title>
+</head>
 
-    </div>
-    <div class="gameScore">
-      <p class="userScore">
+<body>
+  <h1>A game of rock, paper, scissor!</h1>
+  <p class="infoText">Pick one with the buttons below.</p>
+  <div class="gameButtonContainer">
+    <button class="buttonRock">Rock</button>
+    <button class="buttonPaper">Paper</button>
+    <button class="buttonScissor">Scissor</button>
+  </div>
+  <div class="scoreContainer">
+    <p class="gameResult">
+    </p>
+    <p class="userScore">
+    </p>
+    <p class="computerScore">
+    </p>
+  </div>
+</body>
 
-      </p>
-      <p class="computerScore">
-
-      </p>
-    </div>
-  </body>
 </html>
